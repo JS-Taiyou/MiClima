@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d500f9"
+    tools:context="com.olicor.miclima.MainActivity">
+
+    <TextView
+        android:id="@+id/txtTemperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="13"
+        android:textColor="#fff"
+        android:textSize="150sp" />
+
+    <TextView
+        android:id="@+id/txtTiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txtTemperatura"
+        android:layout_centerHorizontal="true"
+        android:text="A las 5pm, estarás a"
+        android:textColor="?android:attr/textColorHintInverse"
+        android:textSize="30sp" />
+    <TextView
+    android:id="@+id/txtUbicacion"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/txtTiempo"
+    android:layout_centerHorizontal="true"
+    android:text="Ciudad Universitaria"
+    android:textColor="#FFF"
+    android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imgGrados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtTemperatura"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@+id/txtTemperatura"
+        android:layout_toRightOf="@+id/txtTemperatura"
+        app:srcCompat="@drawable/degree" />
+
+    <ImageView
+        android:id="@+id/imgIcono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtUbicacion"
+        android:layout_toLeftOf="@+id/txtTiempo"
+        android:layout_toStartOf="@+id/txtTiempo"
+        app:srcCompat="@drawable/cloudy_night" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtTemperatura"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/txtEtiquetaHumedad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humedad"
+                android:gravity="center_horizontal"
+                android:textColor="#80FFFF" />
+
+            <TextView
+                android:id="@+id/txtHumedad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.88"
+                android:textSize="25sp"
+                android:gravity="center_horizontal"
+                android:textColor="#FFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtLluvia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lluvia"
+                android:gravity="center_horizontal"
+                android:textColor="#80FFFF"
+
+                />
+
+            <TextView
+                android:id="@+id/txtProbLluvia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="27%"
+                android:textSize="25sp"
+                android:textColor="#FFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:text="Lluvioso"
+        android:textSize="18dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:textColor="#FFF"/>
+
+</RelativeLayout>

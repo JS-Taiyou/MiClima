@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mi Clima</string>
+    <string name="error_title">Oh no!</string>
+    <string name="error_message">Ha ocurrido un error. Por favor, intenta otra vez.</string>
+    <string name="error_ok_button_text">Entendido</string>
+    <string name="red_inaccesible">No hay una conexión disponible!</string>
+</resources>
